@@ -85,14 +85,4 @@ func main() {
 
 	fmt.Println("Loop array via object")
 	ArrayObjectIterator(Aarray)
-
-	// test slice with pointer arguments
-	fmt.Println("test slice with pointer arguments")
-	slice := []string{"a", "a"}
-	func(slice *[]string) {
-		(*slice)[0] = "b"
-		(*slice)[1] = "b"
-		fmt.Print(*slice)
-	}(&slice)
-	fmt.Print(slice)
 }
